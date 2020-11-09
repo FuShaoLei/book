@@ -18,7 +18,7 @@ new Docute({
       title: 'Guide',
       links: [
         {
-          title: 'Introduction',
+          title: '我对Android MVP模式的理解',
           link: '/introduction'
         },
         {
