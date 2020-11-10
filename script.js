@@ -3,6 +3,7 @@
 new Docute({
   title: "Sorryfu Book",
   highlight: ['typescript', 'go', 'graphql','java','c','c++','bash','kotlin'],
+  editLinkBase: "https://github.com/FuShaoLei/book/edit/main/docs/",
   target: '#docute',
   sourcePath: './docs/',
   sidebar: [
