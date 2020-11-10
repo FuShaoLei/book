@@ -1,29 +1,35 @@
 /* globals Docute */
 
 new Docute({
+  title: "Sorryfu Book",
+  highlight: ['typescript', 'go', 'graphql','java','c','c++','bash','kotlin'],
   target: '#docute',
   sourcePath: './docs/',
-  nav: [
-    {
-      title: 'Home',
-      link: '/'
-    },
-    {
-      title: 'About',
-      link: '/about'
-    }
-  ],
   sidebar: [
     {
-      title: 'Guide',
+      title: 'Android',
       links: [
         {
-          title: '我对Android MVP模式的理解',
-          link: '/introduction'
-        },
+          title: 'MVP模式',
+          link: '/Android/MVP模式'
+        }
+      ]
+    },
+    {
+      title: '《Kotlin实战》',
+      links: [
         {
-          title: 'Installation',
-          link: '/installation'
+          title: 'Kotlin基本要素',
+          link: '/《Kotlin实战》/Kotlin基本要素'
+        }
+      ]
+    },
+    {
+      title: '数据结构',
+      links: [
+        {
+          title: 'C语言快速入门',
+          link: '/数据结构/C语言快速入门'
         }
       ]
     }

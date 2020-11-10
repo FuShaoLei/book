@@ -1,9 +1,10 @@
- # 我对Android MVP模式的理解
+# MVP模式
 
+
+## 前言
 > 以前有学过，感觉理解不了，然后又用不到，然后就不了了之了 QAQ，现在因为实习公司的项目有用到，如果不学的话感觉根本看不懂项目（其实学完之后还是看不懂哈哈哈），所以就重新学过，顺面记录一下
 
 ## 预备知识
-
 通过这一次的学习，以前没有学懂，或者没有理解的东西都显露出来了，说到低还是自己太菜了QAQ，不废话，我认为想要理解好MVP模式就先得了解以下的知识
 
 - 面向接口的编程思想
@@ -15,11 +16,9 @@ ok 如果你不懂的话请往下看、
 ### 面向接口编程
 
 先复习一下接口的概念：
-
 ```
 在Java程序设计语言中，接口不是类，而是对希望符合这个接口的类的一组需求（出自《Java核心卷一》p222页）
 ```
-
 说白了，接口就是一组**需求**
 
 而面向接口编程呢，就是在开始开发前，先定义好接口（可以理解为先列出一组需求），然后再进行开发
@@ -36,7 +35,6 @@ public interface IStudent {
     String getName();
 }
 ```
-
 ```java
 /**
  * 继承实现这个接口
@@ -48,7 +46,6 @@ public class Student implements IStudent{//此时IStudent是父类，Student是�
     }
 }
 ```
-
 ```java
 /**
  * 测试一下
@@ -63,7 +60,6 @@ public class Test {
 ```
 
 ### 解耦
-
 > 以前总听老师说要写出高内聚，低耦合的代码，到现在还是没有理解啊啊啊啊
 
 首先要理解耦合度的概念， 耦合度就是对象之间的**依赖性**，解耦就是降低对象之间或者说是方法之间的依赖性，让其可以独立存在
@@ -71,13 +67,11 @@ public class Test {
 > 好吧 我这里理解也不是特别深（；´д｀）ゞ
 
 ## MVP模式
-
 Actually，我觉得MVP模式的灵魂就是presenter层同时持有view层和model层的**引用**（请联系上边的向上转型的概念）。
 
 ---
 
 照此逻辑，我们简单实现一个常见的登录模块。根据**面向接口编程**，我们首先列出我们的接口（需求）：
-
 ```java
 /**
  * View层的需求
@@ -115,6 +109,7 @@ public interface IPresenter {
 好了，接口写完，现在去实现接口：
 
 ```java
+
 public class View extends AppCompatActivity implements IView{
     private EditText mUsername;
     private EditText mPassword;
@@ -171,7 +166,6 @@ public class Model implements IModel{
     }
 }
 ```
-
 我觉得mvp模式的核心在此
 
 ```java
@@ -202,7 +196,6 @@ public class Presenter implements IPresenter {
 model，view，presenter的接口，就像是三条引子，把它们联系在了一起
 
 ## 参考资料
-
 > 肥肠感谢这些参考资料的作者(≧∀≦)ゞ
 
 - [一步步带你精通MVP](https://mp.weixin.qq.com/s/DuNbl3V4gZY-ZCETbhZGug)
