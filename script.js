@@ -8,8 +8,21 @@ new Docute({
   sourcePath: './docs/',
   sidebar: [
     {
+      title: '《Java技术卷一》',
+      links: [
+        {
+          title: 'Java的基本程序结构设计',
+          link: '/《Java技术卷一》/Java的基本程序结构设计'
+        }
+      ]
+    },
+    {
       title: 'Android',
       links: [
+        {
+          title: 'Android常见布局',
+          link: '/Android/Android常见布局'
+        },       
         {
           title: 'MVP模式',
           link: '/Android/MVP模式'
