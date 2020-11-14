@@ -13,6 +13,10 @@ new Docute({
         {
           title: 'Java的基本程序结构设计',
           link: '/《Java技术卷一》/Java的基本程序结构设计'
+        },
+        {
+          title: '对象与类',
+          link: '/《Java技术卷一》/对象与类'
         }
       ]
     },
